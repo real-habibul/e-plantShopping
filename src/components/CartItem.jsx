@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { removeFromCart, increaseQuantity, decreaseQuantity } from '../redux/CartSlice';
+import { removeItem, updateQuantity } from '../redux/CartSlice';
 import { useState } from 'react';
 
 function CartItem() {
@@ -11,15 +11,15 @@ function CartItem() {
   const [checkoutMessage, setCheckoutMessage] = useState('');
 
   const handleIncrease = (productName) => {
-    dispatch(increaseQuantity({ productName }));
+    dispatch(updateQuantity({ productName, amount: 1 }));
   };
 
   const handleDecrease = (productName) => {
-    dispatch(decreaseQuantity({ productName }));
+    dispatch(updateQuantity({ productName, amount: -1 }));
   };
 
   const handleDelete = (productName) => {
-    dispatch(removeFromCart({ productName }));
+    dispatch(removeItem({ productName }));
   };
 
   const handleCheckout = () => {

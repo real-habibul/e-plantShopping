@@ -5,7 +5,7 @@ A React-based e-commerce shopping application for houseplants, built as the fina
 ## Features
 
 - **Landing Page**: Beautiful background image with company description and "Get Started" button
-- **Product Listing Page**: Browse 9 houseplants across 3 categories (Succulents, Tropical Plants, Flowering Plants)
+- **Product Listing Page**: Browse 18 houseplants across 3 categories (Succulents, Tropical Plants, Flowering Plants)
   - Each plant displays thumbnail, name, and price
   - Add to Cart functionality with button disable after adding
   - Dynamic cart quantity display in the header
@@ -33,7 +33,6 @@ src/
 ├── components/
 │   ├── AboutUs.jsx       # Company information page
 │   ├── CartItem.jsx      # Shopping cart page with full cart management
-│   ├── LandingPage.jsx   # Landing page with background image
 │   └── ProductList.jsx   # Product listing with categories and add-to-cart
 ├── redux/
 │   ├── CartSlice.jsx     # Redux slice for cart state management
@@ -45,7 +44,7 @@ src/
 
 ## Live Demo
 
-Visit the deployed application: [Paradise Nursery on GitHub Pages](https://real-habibul.github.io/paradise-nursery/)
+Visit the deployed application: [Paradise Nursery on GitHub Pages](https://real-habibul.github.io/e-plantShopping/)
 
 ## Author
 

@@ -11,7 +11,7 @@ function AboutUs() {
           <Link to="/cart">Cart</Link>
         </div>
       </nav>
-      <div className="about-container">
+      <div className="about-us-container">
         <h1>About Paradise Nursery</h1>
         <p>
           Welcome to Paradise Nursery, your premier destination for beautiful and healthy houseplants!
@@ -19,10 +19,11 @@ function AboutUs() {
           to ensure every customer finds the perfect green companion for their home or office.
         </p>
         <p>
-          At Paradise Nursery, we believe that plants bring joy, purify the air, and create a peaceful
-          atmosphere in any space. Our team of expert horticulturists hand-selects each plant for its
-          health, beauty, and ease of care, so whether you are a seasoned plant parent or just starting
-          your green journey, we have something perfect for you.
+          <strong>Our Mission:</strong> At Paradise Nursery, our mission is to make the joy of plant
+          ownership accessible to everyone. We believe that plants bring joy, purify the air, and create
+          a peaceful atmosphere in any space. Our team of expert horticulturists hand-selects each plant
+          for its health, beauty, and ease of care, so whether you are a seasoned plant parent or just
+          starting your green journey, we have something perfect for you.
         </p>
         <p>
           We offer a wide variety of houseplants including succulents, tropical plants, flowering plants,
