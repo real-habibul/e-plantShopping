@@ -10,6 +10,10 @@ function CartItem() {
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   const [checkoutMessage, setCheckoutMessage] = useState('');
 
+  const calculateTotalAmount = () => {
+    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+  };
+
   const handleIncrease = (productName) => {
     dispatch(updateQuantity({ productName, amount: 1 }));
   };
@@ -54,7 +58,7 @@ function CartItem() {
               <h2>Shopping Cart</h2>
               <div className="total-info">
                 <p>Total Items: {totalQuantity}</p>
-                <p className="total-cost">Total Cost: ${totalAmount.toFixed(2)}</p>
+                <p className="total-cost">Total Cost: ${calculateTotalAmount()}</p>
               </div>
             </div>
 

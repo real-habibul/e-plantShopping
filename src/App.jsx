@@ -1,10 +1,23 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Routes, Route, Link, useNavigate } from 'react-router-dom'
 import ProductList from './components/ProductList'
 import CartItem from './components/CartItem'
 import AboutUs from './components/AboutUs'
 import './App.css'
 
 function LandingPage() {
+  const [showProductList, setShowProductList] = useState(false);
+  const navigate = useNavigate();
+
+  const handleGetStartedClick = () => {
+    setShowProductList(true);
+    navigate('/products');
+  };
+
+  if (showProductList) {
+    return <ProductList />;
+  }
+
   return (
     <div className="landing-page">
       <h1>Welcome to Paradise Nursery</h1>
@@ -14,9 +27,9 @@ function LandingPage() {
         carefully curated selection of greenery to transform any space into a personal paradise.
         Every plant is hand-selected for quality and comes with expert care guidance.
       </p>
-      <Link to="/products" className="get-started-btn">
+      <button className="get-started-btn" onClick={handleGetStartedClick}>
         Get Started
-      </Link>
+      </button>
     </div>
   );
 }
